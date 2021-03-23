@@ -1,0 +1,7 @@
+// .gitignore文件
+
+/node_modules
+/.pnp
+.dist
+.vscode
+.idea
