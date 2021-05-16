@@ -1,19 +1,18 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  layout:{
-    name: '宿舍管理系统',
-    layout: 'side',
-    logo:'/QKteam.png',
-  },
   nodeModulesTransform: {
     type: 'none',
   },
-  routes: [
-    { path: '/', component: '@/pages/index' },
-  ],
   fastRefresh: {},
-  links: [
-    { rel: 'icon', href: '/QKteam.png' },
+  links: [{ rel: 'icon', href: '/QKteam.png' }],
+  routes: [
+    { path: '/Login', component: 'Login/Login' },
+    {
+      path: '/',
+      component: '@/layouts/index',
+      routes: [{ path: '/Houselist', component: 'HouseList/HouseList' }],
+    },
+
   ],
 });
